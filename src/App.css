@@ -1,0 +1,96 @@
+/* General Styles */
+.contact-container {
+    min-height: 100vh;
+    background-color: inherit;
+    padding: 1rem; /* Reduced padding for smaller screens */
+  }
+  
+  .contact-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Ensure padding inside the wrapper */
+  }
+  
+  /* Header Section */
+  .contact-title {
+    font-size: 1.8rem; /* Slightly smaller font for smaller screens */
+  }
+  
+  .contact-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  /* Grid Layout */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 300px 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Form and Card Adjustments */
+  .contact-info-card, .form-card {
+    padding: 1rem; /* Reduced padding for smaller screens */
+  }
+  
+  .info-title {
+    font-size: 1rem; /* Adjusted for readability */
+  }
+  
+  .info-item {
+    gap: 0.5rem;
+  }
+  
+  .info-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Input and Button Adjustments */
+  .form-input,
+  .form-textarea {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .submit-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Popup Adjustments */
+  .popup {
+    width: 90%; /* Adapt popup to fit smaller screens */
+    max-width: 320px; /* Limit popup width */
+    padding: 16px;
+  }
+  
+  .popup p {
+    font-size: 0.875rem;
+  }
+  
+  /* Small Screens */
+  @media (max-width: 480px) {
+    .contact-title {
+      font-size: 1.5rem; /* Further reduce for very small screens */
+    }
+  
+    .contact-subtitle {
+      font-size: 0.8rem;
+    }
+  
+    .form-card, .contact-info-card {
+      padding: 0.75rem; /* Tighter spacing */
+    }
+  
+    .social-icons {
+      gap: 0.5rem; /* Closer icons for smaller screens */
+    }
+  }
+  
