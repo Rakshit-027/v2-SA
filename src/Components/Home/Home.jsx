@@ -9,6 +9,8 @@ import BlurText from '../Split/SplitText';
 import ShinyText from '../ShinyText/ShinyText';
 import Button from '../Mini-Components/Button';
 import SpotlightCard from '../Mini-Components/SpotlightCard/SpotlightCard';
+import StarBorder from '../Mini-Components/StarBorder/StarBorder';
+import HeroImageSlider from '../Mini-Components/HeroImageSlider/HeroImageSlider';
 
 const features = [
   {
@@ -46,7 +48,8 @@ const features = [
 function Home() {
   const handleAnimationComplete = () => {
     console.log('All letters have animated!');
-    };
+  };
+
   return (
     <div className="home-container">
       <Helmet>
@@ -55,10 +58,14 @@ function Home() {
           name="description"
           content="Transform your digital vision into reality with StackAura. We create innovative, scalable, and secure digital solutions tailored to your business needs."
         />
-        <meta name="keywords" content="Web Solutions, Digital Transformation, Modern Websites, Scalable Web Design, Secure Applications" />
+        <meta name="keywords" content="Web Solutions, Digital Transformation, Modern Websites, Scalable Web Design, Secure Applications, Custom Software Development, Business Growth, UX/UI Design, SEO Optimization" />
         <meta name="author" content="StackAura" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://www.stackaura.in" />
+        <meta property="og:title" content="Stackaura - Where Ideas Meet Impeccable Design" />
+        <meta property="og:description" content="Experience excellence in digital solutions with StackAura. Innovative, scalable, and secure services to elevate your business." />
+        <meta property="og:url" content="https://www.stackaura.in" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       {/* Hero Section */}
@@ -66,10 +73,10 @@ function Home() {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-heading">
-            <SplitText text='Transform Your' delay='100'/> <br /><SplitText text='Digital vision Into' delay='200'/><br /><SplitText text='Reality' delay='700'/> </h1> 
-
-              <p className="hero-description">
-             <ShinyText text=' We create innovative digital solutions that help businesses thrive in the modern world. 
+              <SplitText text='Transform Your' delay='100'/> <br /><SplitText text='Digital vision Into' delay='200'/><br /><SplitText text='Reality' delay='700'/> 
+            </h1> 
+            <p className="hero-description">
+              <ShinyText text='We create innovative digital solutions that help businesses thrive in the modern world. 
               Experience excellence in every pixel.'/>
             </p>
             <Link to="pricing" smooth={true} duration={500} spy={true} offset={-70} className="hero-button">
@@ -77,40 +84,36 @@ function Home() {
             </Link>
           </div>
           <div className="hero-image-container">
-            <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
-              alt="Digital Innovation"
-              className="hero-image"
-            />
+            <HeroImageSlider/>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="features-section">
-        <h2 className="features-heading">Why Choose Us</h2>
+        <h2 className="features-heading"><ShinyText text="Why Choose Us"/></h2>
         <div className="features-grid">
           {features.map((feature, index) => (
-            <div key={index} className="feature-card">
+            <SpotlightCard key={index} className="feature-card">
               <div className="feature-icon">{feature.icon}</div>
-              <h3 className="feature-title">{feature.title}</h3>
-              <p className="feature-description">{feature.description}</p>
-            </div>
+              <h3 className="feature-title"><ShinyText text={feature.title}/></h3>
+              <p className="feature-description"><ShinyText text={feature.description}/></p>
+            </SpotlightCard>
           ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <SpotlightCard className="cta-section">
+      {/* CTA Section */} 
+      <SpotlightCard StarBorder className="cta-section">
         <div className="">
-          <h2 className="">Ready to Start Your Project?</h2>
+          <h2 className=""><ShinyText text="Ready to Start Your Project?"/></h2>
           <p className="">
-            Join hundreds of satisfied clients who have transformed their digital presence with us.
+            <ShinyText text="Join hundreds of satisfied clients who have transformed their digital presence with us."/>
           </p>
           <Link to="contact" smooth={true} duration={500} spy={true} offset={-70} className="cta-button">
             <Button text="Contact Us Now"/>
           </Link>
-        </div>
+        </div>      
       </SpotlightCard>
     </div>
   );

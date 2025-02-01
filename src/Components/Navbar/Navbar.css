@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 
 .navbar {
@@ -62,9 +63,9 @@
 
 .nav-link {
   color: #4b5563;
-  font-size: 25px;
-  font-weight: 500;
-  font-family: "Tajawal", serif;;
+  font-size: 22px;
+  font-weight: 800;
+  font-family: "Crimson Text", serif;
   text-decoration: none;
   transition: color 0.3s ease;
   cursor: pointer;

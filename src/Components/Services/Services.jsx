@@ -2,18 +2,20 @@ import React from 'react';
 import { Code2, Palette, Globe2, Smartphone, Megaphone, LineChart } from 'lucide-react';
 import './Services.css';
 import ShinyText from '../ShinyText/ShinyText';
+import SpotlightCard from '../Mini-Components/SpotlightCard/SpotlightCard';
+import StarBorder from '../Mini-Components/StarBorder/StarBorder';
 const ServiceCard = ({ title, description, Icon }) => (
-  <div className="service-card">
+  <StarBorder className="service-card">
     <div className="service-icon">
       <Icon size={32} />
     </div>
-    <h3>{title}</h3>
-    <p>{description}</p>
+    <h3><ShinyText text={title}/></h3>
+    <p><ShinyText text ={description}/></p>
     <div className="learn-more">
       {/* <span>Learn More</span> */}
       <div className="arrow"></div>
     </div>
-  </div>
+  </StarBorder>
 );
 
 function Services() {
@@ -54,7 +56,7 @@ function Services() {
     <div className="services">
       <div className="services-container">
         <div className="services-header">
-          <h1>Our Services</h1>
+          <h1><ShinyText text="Our Services"/></h1>
           <p><ShinyText text= 'Comprehensive digital solutions to help your business thrive in the modern world'/></p>
         </div>
         

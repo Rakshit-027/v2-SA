@@ -57,7 +57,7 @@
 
 .hero-description {
   color: #d1d5db;
-  font-size: 1.125rem;
+  font-size: 1.3rem;
   line-height: 1.75;
   margin-bottom: 2rem;
   max-width: 40rem;
@@ -66,7 +66,7 @@
 
 @media (min-width: 768px) {
   .hero-description {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -141,7 +141,7 @@
 }
 
 .feature-card {
-  background-color: white;
+  /* background-color: white; */
   padding: 1.5rem;
   border-radius: 0.75rem;
   transition: background-color 0.3s ease;
@@ -149,13 +149,13 @@
 }
 
 .feature-card:hover {
-  background-color: lightgray;
+  /* background-color: lightgray; */
 }
 
 .feature-icon {
-  background-color: #2563eb;
-  width: 4rem;
-  height: 4rem;
+  background-color: inherit;
+  width: 2rem;
+  height: 2rem;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -167,7 +167,7 @@
 .feature-title {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1a202c;
+  color: white;
   margin-bottom: 0.5rem;
 }
 

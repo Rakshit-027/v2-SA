@@ -4,6 +4,7 @@ import './Contact.css';
 import Footer from '../Footer/Footer';
 import emailjs from 'emailjs-com';
 import {Link} from 'react-scroll'
+import ShinyText from '../ShinyText/ShinyText';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -55,9 +56,9 @@ const Contact = () => {
     <div className="contact-container">
       <div className="contact-wrapper">
         <div className="contact-header">
-          <h1 className="contact-title">Contact Us</h1>
+          <h1 className="contact-title"><ShinyText text="Contact Us"/></h1>
           <p className="contact-subtitle">
-            Get in touch with us for any questions or inquiries
+          <ShinyText text="Get in touch with us for any questions or inquiries"/>
           </p>
         </div>
 

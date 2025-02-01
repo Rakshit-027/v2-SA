@@ -1,7 +1,8 @@
 import React from "react"
 import { Code2, Globe, Cpu, Wrench } from "lucide-react"
 import "./Pricing.css"
-import { Link } from "react-scroll"
+import { Button, Link } from "react-scroll"
+import ShinyText from "../ShinyText/ShinyText"
 
 const PricingCard = ({ plan }) => (
   <div className={`pricing-plan ${plan.featured ? "featured-plan" : ""}`}>
@@ -100,7 +101,7 @@ const Pricing = () => {
     <div className="pricing-container">
       <div className="pricing-header">
         <h1>Affordable Plans for Every Business</h1>
-        <p>Choose the right plan to grow your online presence</p>
+        <p><ShinyText text ="Choose the right plan to grow your online presence"/></p>
       </div>
 
       <div className="pricing-grid">
@@ -110,9 +111,6 @@ const Pricing = () => {
       </div>
 
       <div className="pricing-cta">
-        <Link to="contact" smooth={true} duration={700} spy={true} offset={-50} className="cta-btn">
-          <button className="cta-button">Get Started</button>
-        </Link>
       </div>
     </div>
   )

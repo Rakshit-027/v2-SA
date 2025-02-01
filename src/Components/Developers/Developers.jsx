@@ -1,6 +1,8 @@
 import React from 'react';
 import { Code2, Database, Github } from 'lucide-react';
 import './Developers.css';
+import ShinyText from '../ShinyText/ShinyText';
+import SpotlightCard from '../Mini-Components/SpotlightCard/SpotlightCard';
 
 const DeveloperCard = ({ name, role, github }) => (
   <div className="developer-card">
@@ -52,7 +54,7 @@ function Developers() {
     },
     {
       name: "Swapnil Tripathi",
-      role: "Chief Financial Officer",
+      role: "Financial Officer",
       github: "https://github.com"
     }
   ];
@@ -61,15 +63,15 @@ function Developers() {
     <section className="developers" id="developers">
       <div className="developers-container">
         <div className="section-header">
-          <h2>Meet Our Team</h2>
-          <p>The creative minds behind our exceptional web solutions</p>
+          <h2><ShinyText text ="Meet Our Team"/></h2>
+          <p><ShinyText text="The creative minds behind our exceptional web solutions"/></p>
         </div>
         
-        <div className="developers-grid">
+        <SpotlightCard className="developers-grid">
           {developers.map((dev, index) => (
             <DeveloperCard key={index} {...dev} />
           ))}
-        </div>
+        </SpotlightCard>
       </div>
       
       <div className="grid-background"></div>
